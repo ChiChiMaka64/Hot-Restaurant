@@ -22,13 +22,13 @@ var server = http.createServer(handleRequest);
 // Star Wars Characters (DATA)
 var reservations = [
     {
-      routeName: "yoda",
-      name: "Yoda",
-      role: "Jedi Master",
-      age: 900,
-      forcePoints: 2000
+        routeName: "yoda",
+        name: "Yoda",
+        role: "Jedi Master",
+        age: 900,
+        forcePoints: 2000
     }
-  ];
+];
 
 
 // Sets up the Express app to handle data parsing (middleware)
@@ -37,27 +37,33 @@ app.use(bodyParser.json());
 
 
 // Create a function for handling the requests and responses coming into our server
-function handleRequest(req, res) {
-    var path = req.url;
-    switch (path) {
+// function handleRequest(req, res) {
+//     var path = req.url;
+//     switch (path) {
 
-        case "/":
-            return displayRoot(path, req, res);
+//         case "/":
+//             return displayRoot(path, req, res);
 
-        case "/cssframeworks":
-            return displayCSS(path, req, res);
+//         case "/cssframeworks":
+//             return displayCSS(path, req, res);
 
-        default:
-            return display404(path, req, res);
-    }
-};
+//         default:
+//             return display404(path, req, res);
+//     }
+// };
 
 
 // Basic routes
 app.get("/", function (req, res) {
-    // res.sendFile(path.join(__dirname, "hey"));
-    res.writeHead(200, { "Content-Type": "text/html" });
-    res.end("hey");
+    res.sendFile(path.join(__dirname, "home.html"));
+});
+
+app.get("/tables", function (req, res) {
+    res.sendFile(path.join(__dirname, "tables.html"));
+});
+
+app.get("/reserve", function (req, res) {
+    res.sendFile(path.join(__dirname, "reserve.html"));
 });
 
 
