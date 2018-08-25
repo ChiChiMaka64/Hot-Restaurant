@@ -1,0 +1,28 @@
+{
+  "name": "Hot-Restaurant",
+  "version": "1.0.0",
+  "description": "A One-Stop Shop in Booking and Reserving Restaurant spots!",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChiChiMaka64/Hot-Restaurant.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChiChiMaka64/Hot-Restaurant/issues"
+  },
+  "homepage": "https://github.com/ChiChiMaka64/Hot-Restaurant#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "fs": "0.0.1-security",
+    "html": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
